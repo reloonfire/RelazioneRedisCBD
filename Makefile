@@ -1,16 +1,16 @@
 SERVICE = redis
 
 start:
-	@docker-compose up -d --remove-orphans
+	@docker compose up -d --remove-orphans
 
 stop:
-	@docker-compose down
+	@docker compose down
 
 restart: stop start
 
 shell:
-	@docker-compose exec $(SERVICE) bash
+	@docker compose exec $(SERVICE) bash
 
 cli:
-	@docker-compose exec $(SERVICE) redis-cli
+	@docker compose exec $(SERVICE) redis-cli
 
